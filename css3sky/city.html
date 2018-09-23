@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .stage{
+            position: relative;
+            height: 600px;
+            overflow: hidden;
+        }
+        .oversky {
+            position: absolute;
+            height: inherit;
+            width: 100%;
+            background: rgba(15, 25, 44, 0.7);
+            animation: oversky 10s linear infinite alternate;
+        }
+
+        @keyframes oversky {
+            0% {opacity: 1;}
+            50% {opacity: 0.5}
+            100% {opacity: 0}
+        }
+
+        @-webkit-keyframes oversky {
+            0% {opacity: 1;}
+            50% {opacity: 0.5}
+            100% {opacity: 0}
+        }
+        /*云和气球*/
+        .cloud {
+            position: absolute;
+            top: 10%;
+        }
+        .cloudLarge {
+            height: 169px;
+	        width: 302px;
+            background: url(./images/cloudLarge.png) no-repeat no-repeat center;
+            animation: cloudLarge 105s infinite;
+            -webkit-animation: cloudLarge 105s infinite;
+            z-index: 1;
+        }
+        .cloudSmall {
+            height: 50px;
+	        width: 89px;
+            background: url(./images/cloudSmall.png) no-repeat no-repeat center;
+            animation: cloudSmall 105s infinite;
+            -webkit-animation: cloudSmall 105s infinite;
+            z-index: 3
+        }
+        .cloudMiddle {
+            height: 92px;
+	        width: 159px;
+            background: url(./images/cloudMedium.png) no-repeat no-repeat center;
+            animation: cloudMiddle 105s infinite;
+            -webkit-animation: cloudMiddle 105s infinite;
+            z-index: 2;
+        }
+
+        @keyframes cloudLarge {
+            0% {left: 10%}
+            100% {left: 90%}
+        }
+        @keyframes cloudSmall {
+            0% {right: 10%}
+            100% {right: 90%}
+        }
+        @keyframes cloudMiddle {
+            0% {left: 80%}
+            100% {left: -80%}
+        }
+        @-webkit-keyframes cloudLarge {
+            0% {left: 10%}
+            100% {left: 90%}
+        }
+        @-webkit-keyframes cloudSmall {
+            0% {right: 10%}
+            100% {right: 90%}
+        }
+        @-webkit-keyframes cloudMiddle {
+            0% {left: 40%}
+            100% {left: -5%}
+        }
+        .ballon {
+            position: absolute;
+            top: 20%;
+            background: url(./images/balloon.png) no-repeat no-repeat center;
+            height: 227px;
+	        width: 157px;
+            animation: ballon 200s infinite ease alternate;
+            -webkit-animation: ballon 200s infinite ease alternate;
+            z-index: 4;
+        }
+
+        @keyframes ballon{
+            0% {left: 5%; transform: rotate(15deg)}
+            25% {left: 50%; transform: rotate(45deg)}
+            25% {left: 75%; transform: rotate(30deg)}
+            90% {left: 100%; transform: rotate(0deg)}
+        }
+
+        @-webkit-keyframes ballon{
+            0% {left: 5%; transform: rotate(15deg)}
+            25% {left: 50%; transform: rotate(45deg)}
+            25% {left: 75%; transform: rotate(30deg)}
+            90% {left: 100%; transform: rotate(0deg)}
+        }
+        /*太阳和月亮*/
+        .universe{
+            top: 30px;
+            left: 150px;
+            height: 600px;
+            width: 80%;
+            position: absolute;
+            animation: universe 20s infinite linear;
+        }
+
+        @keyframes universe {
+            0% {transform: rotate(45deg)}
+            100% {transform: rotate(405deg)}
+        }
+        .sun {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: red;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        .moon {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: yellow;
+            position: absolute;
+
+        }
+
+        /*地面的草地*/
+        .ground {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            z-index: 1;
+        }
+        .groundFront{
+            height: 300px;
+            background: url(images/groundFront.png) repeat no-repeat center;
+            z-index: 3;
+        }
+        .groundBack{
+            height: 280px;
+            background: url(images/groundBack.png) repeat no-repeat center;
+        }
+        .groundMid{
+            width: 500px;
+            height: 305px;
+            bottom: -26px;
+            background: url(images/groundMid.png) repeat no-repeat center;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class='stage'>
+        <div class='oversky'></div>
+        <div class='sky'>
+            <div class='cloud cloudLarge'></div>
+            <div class='cloud cloudSmall'></div>
+            <div class='cloud cloudMiddle'></div>
+            <div class='ballon'></div>
+            <div class='universe'>
+                <div class='sun'></div>
+                <div class='moon'></div>
+            </div>
+        </div>
+        <div class='center'>
+        </div>
+        <div class='bottom'>
+            <div class='ground groundFront'></div>
+            <div class='ground groundBack'></div>
+            <div class='ground groundMid'></div>
+        </div>
+    </div>
+    
+</body>
+</html>
