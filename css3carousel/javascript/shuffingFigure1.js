@@ -1,7 +1,7 @@
 window.onload = function() {
     let images = document.getElementsByTagName('img');
     let imageParent = document.getElementsByClassName('img_list')[0];
-    let i = 1;
+    let i = 0;
 
     let btn = document.getElementsByClassName('circle');
 
@@ -51,7 +51,7 @@ window.onload = function() {
         btn[j].onmouseenter = (function(index) {
             return function() {
                 clearInterval(timer);
-                imageParent.style.transform = `translate3d(${-200*index}px, 0, 0)`;
+                imageParent.style.transform = `translate3d(${-200*(index + 1)}px, 0, 0)`;
                 selectedBtn(index);
                 i = index + 1;
             }
@@ -59,7 +59,7 @@ window.onload = function() {
         btn[j].onmouseleave = (function(index) {
             return function() {
                 timer = showPicture();
-                imageParent.style.transform = `translate3d(${-200*index}px, 0, 0)`;
+                imageParent.style.transform = `translate3d(${-200*(index + 1)}px, 0, 0)`;
             }
         })(j);
     }
