@@ -1,0 +1,56 @@
+body{
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+}
+
+.picture_wrapper{
+    width: 500px;
+    height: 400px;
+    border: 1px solid black;
+    padding: 40px;
+    position: relative;
+}
+
+.picture_list{
+    overflow: hidden;
+    width: 200px;
+    height: 300px;
+}
+
+.img_list{
+    width: 1600px;
+    height: 300px;
+    position: relative;
+    /*初始值-200px*/
+    transform: translate3d(-200px, 0, 0);
+    transition:transform 1s cubic-bezier(0, 0, 0.25, 1) ;
+}
+
+.img_list img{
+   float: left;
+}
+
+.select_list{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 30px;
+    left: -30%;
+}
+
+.select_list .circle {
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    background: white;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.select_list .circle:hover,.select_list .selected {
+    background: #888;
+}
+
