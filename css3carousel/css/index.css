@@ -7,7 +7,7 @@ body{
 
 .picture_wrapper{
     width: 500px;
-    height: 400px;
+    height: 300px;
     border: 1px solid black;
     padding: 40px;
     position: relative;
@@ -17,6 +17,7 @@ body{
     overflow: hidden;
     width: 200px;
     height: 300px;
+    position: relative;
 }
 
 .img_list{
@@ -37,7 +38,6 @@ body{
     justify-content: center;
     position: relative;
     bottom: 30px;
-    left: -30%;
 }
 
 .select_list .circle {
@@ -53,4 +53,84 @@ body{
 .select_list .circle:hover,.select_list .selected {
     background: #888;
 }
+
+.picture_list .arrow_wrapper {
+    position: relative;
+    left: 90%;
+    top: -50%;
+    width: 20px;
+    height: 20px;
+    background: #888;
+    opacity: 0.6;
+}
+
+.picture_list .arrow_wrapper:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+
+.picture_list .arrow_wrapper2 {
+    position: relative;
+    top: -56%;
+    left: 0%;
+    width: 20px;
+    height: 20px;
+}
+
+
+
+.picture_list .arrow_wrapper .arrow1 {
+    position: relative;
+    border: 10px solid transparent;
+    width: 0px;
+    height: 0;
+
+}
+
+.picture_list .arrow_wrapper .arrow1:before,
+.picture_list .arrow_wrapper .arrow1:after {
+    content: '';
+    position: absolute;
+}
+
+.picture_list .arrow_wrapper .arrow1:before {
+    border: 7px solid transparent;
+    border-left: 7px solid white;
+    top: -7px;
+}
+
+.picture_list .arrow_wrapper .arrow1:after {
+    border: 5px solid transparent;
+    border-left: 5px solid #888;
+    top: -5px;
+}
+
+
+.picture_list .arrow_wrapper2 .arrow2 {
+    position: relative;
+    width: 0px;
+    height: 0px;
+}
+
+.picture_list .arrow_wrapper .arrow2:before,
+.picture_list .arrow_wrapper .arrow2:after {
+    content: '';
+    position: absolute;
+}
+
+.picture_list .arrow_wrapper .arrow2:before {
+    border: 7px solid transparent;
+    border-right: 7px solid white;
+    top: 4px;
+}
+
+.picture_list .arrow_wrapper .arrow2:after {
+    border: 5px solid transparent;
+    border-right: 5px solid #888;
+    top: 6px;
+    left: 4px;
+}
+
 
