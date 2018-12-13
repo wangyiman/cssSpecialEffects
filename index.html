@@ -7,6 +7,18 @@
     <title>CSS3 advanced effects</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <style>
+        @keyframes slideInUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0.8;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
         h3{
             text-shadow: 2px 2px 2px #aaa;
         }
@@ -30,10 +42,13 @@
         .info{
             font-size: 12px;
         }
+        .title{
+            animation: slideInUp 3s;
+        }
     </style>
 </head>
 <body>
-    <h3>css3案例实践</h3>
+    <h3 class='title'>css3案例实践</h3>
     <ul>
         <li>    
             <a href="./css3sky/sky.html">预览日出日落城市效果</a>&nbsp;&nbsp;
